@@ -4,8 +4,10 @@ import 'package:flutter_api_rest/pages/login_page.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_api_rest/pages/register_page.dart';
 import 'package:flutter_api_rest/pages/splash_page.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
-void main() {
+void main() async {
+  await DotEnv().load('.env');
   runApp(MyApp());
 }
 

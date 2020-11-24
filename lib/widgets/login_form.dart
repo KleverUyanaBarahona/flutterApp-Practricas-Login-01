@@ -78,7 +78,7 @@ class _LoginFormState extends State<LoginForm> {
                         },
                       ),
                     ),
-                    /*FlatButton(
+                    FlatButton(
                       padding: EdgeInsets.symmetric(vertical: 10),
                       child: Text(
                         "Forgot Password",
@@ -89,7 +89,7 @@ class _LoginFormState extends State<LoginForm> {
                         ),
                       ),
                       onPressed: () {},
-                    )*/
+                    )
                   ],
                 ),
               ),
@@ -119,7 +119,7 @@ class _LoginFormState extends State<LoginForm> {
                       fontSize: responsive.dp(1.5),
                     ),
                   ),
-                  /*FlatButton(
+                  FlatButton(
                     child: Text(
                       "Sign up",
                       style: TextStyle(
@@ -130,7 +130,7 @@ class _LoginFormState extends State<LoginForm> {
                     onPressed: () {
                       Navigator.pushNamed(context, 'register');
                     },
-                  )*/
+                  )
                 ],
               ),
               SizedBox(height: responsive.dp(10)),

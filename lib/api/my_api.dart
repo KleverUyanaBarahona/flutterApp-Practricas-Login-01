@@ -5,8 +5,19 @@ import 'package:flutter_api_rest/pages/home_page.dart';
 import 'package:flutter_api_rest/utils/auth.dart';
 import 'package:flutter_api_rest/utils/dialogs.dart';
 import 'package:meta/meta.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+
+final String puerto =  DotEnv().env['ORGANIZATION_ID'];
+// ignore: non_constant_identifier_names
+final String api_url = DotEnv().env['API_URL'];
+// ignore: non_constant_identifier_names
+final String api_key = DotEnv().env['API_KEY'];
+// ignore: non_constant_identifier_names
+//final String auth_url = DotEnv().env['AUTH_URL'];
+final String auth_url = DotEnv().env['AUTH_URL'];
 
 class MyAPI {
+
   MyAPI._internal();
   static MyAPI _instance = MyAPI._internal();
   static MyAPI get instance =>_instance;
@@ -52,11 +63,13 @@ class MyAPI {
       @required String email,
       @required String password}) async {
     final ProgressDialog progressDialog = ProgressDialog(context);
+    //final String url = api_url.toString()+auth_url.toString();
+    //print("url"+url);
     try {
       progressDialog.show();
       final Response response = await this._dio.post(
-          'https://staging.chaingoapi.com/authentication-ms/v1/api/oauth/token',
-          options: Options(headers: {"api-key": "ofVEyeMLANL6GxTt75LXAX6IVqrs7P4q"}),
+          api_url+auth_url,
+          options: Options(headers: {"api-key": api_key}),
           data: {
             "username": email,
             "password": password,
@@ -96,12 +109,12 @@ class MyAPI {
       };
       print("fffff"+session.refreshToken);
       final Response response = await this._dio.post(
-        'https://staging.chaingoapi.com/authentication-ms/v1/api/oauth/token',
+        api_url+auth_url,
         queryParameters: params
         ,options: Options(
         headers: {
           "authorization": session.tokenType+" "+session.accessToken,
-          "api-key": "ofVEyeMLANL6GxTt75LXAX6IVqrs7P4q"
+          "api-key": api_key
         }
       ),
       );
