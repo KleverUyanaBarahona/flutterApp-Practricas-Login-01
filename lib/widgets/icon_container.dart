@@ -26,9 +26,9 @@ class IconContainer extends StatelessWidget {
       padding: EdgeInsets.all(this.size * 0.15),
       child: Center(
         child: SvgPicture.asset(
-          'assets/icon.svg',
-          width: this.size * 0.6,
-          height: this.size * 0.6,
+          'assets/logo_chaingo.svg',
+          width: this.size * 0.7,
+          height: this.size * 0.7,
         ),
       ),
     );

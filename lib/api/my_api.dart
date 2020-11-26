@@ -24,6 +24,7 @@ class MyAPI {
 
   final Dio _dio = Dio();
 
+  //
   Future<void> register(BuildContext context,
       {@required String username,
       @required String email,

@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
       routes: {
         RegisterPage.routeName: (_) => RegisterPage(),
         LoginPage.routeName: (_) => LoginPage(),
-        HomePage.routeName: (_) => HomePage()
+        HomePage.routeName: (_) => HomePage(),
       },
     );
   }

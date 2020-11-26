@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_api_rest/utils/color_parse.dart';
 
 class AvatarButton extends StatelessWidget {
   final double imageSize;
@@ -47,7 +48,7 @@ class AvatarButton extends StatelessWidget {
                   color: Colors.white,
                   width: 2,
                 ),
-                color: Colors.pink,
+                color: parseColor('#42D1DD'),
                 shape: BoxShape.circle,
               ),
             ),

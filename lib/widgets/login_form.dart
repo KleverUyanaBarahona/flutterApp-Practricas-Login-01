@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_api_rest/api/my_api.dart';
+import 'package:flutter_api_rest/utils/color_parse.dart';
 import 'package:flutter_api_rest/utils/responsive.dart';
 import 'input_text.dart';
 
@@ -29,7 +30,7 @@ class _LoginFormState extends State<LoginForm> {
       bottom: 30,
       child: Container(
         constraints: BoxConstraints(
-          maxWidth: responsive.isTablet ? 430 : 360,
+          maxWidth: responsive.isTablet ? 430 : 320,
         ),
         child: Form(
           key: _formKey,
@@ -78,7 +79,7 @@ class _LoginFormState extends State<LoginForm> {
                         },
                       ),
                     ),
-                    FlatButton(
+                    /*FlatButton(
                       padding: EdgeInsets.symmetric(vertical: 10),
                       child: Text(
                         "Forgot Password",
@@ -89,7 +90,7 @@ class _LoginFormState extends State<LoginForm> {
                         ),
                       ),
                       onPressed: () {},
-                    )
+                    )*/
                   ],
                 ),
               ),
@@ -106,7 +107,7 @@ class _LoginFormState extends State<LoginForm> {
                     ),
                   ),
                   onPressed: this._submit,
-                  color: Colors.pinkAccent,
+                  color: parseColor('#33929A'),
                 ),
               ),
               SizedBox(height: responsive.dp(2)),
@@ -119,18 +120,18 @@ class _LoginFormState extends State<LoginForm> {
                       fontSize: responsive.dp(1.5),
                     ),
                   ),
-                  FlatButton(
+                  /*FlatButton(
                     child: Text(
                       "Sign up",
                       style: TextStyle(
-                        color: Colors.pinkAccent,
+                        color: parseColor('#33929A'),
                         fontSize: responsive.dp(1.5),
                       ),
                     ),
                     onPressed: () {
                       Navigator.pushNamed(context, 'register');
                     },
-                  )
+                  )*/
                 ],
               ),
               SizedBox(height: responsive.dp(10)),

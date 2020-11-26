@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_api_rest/api/my_api.dart';
+import 'package:flutter_api_rest/utils/color_parse.dart';
 import 'package:flutter_api_rest/utils/dialogs.dart';
 import 'package:flutter_api_rest/utils/responsive.dart';
 import 'input_text.dart';
@@ -97,7 +98,7 @@ class _RegisterFormState extends State<RegisterForm> {
                     ),
                   ),
                   onPressed: this._submit,
-                  color: Colors.pinkAccent,
+                  color: parseColor('#33929A'),
                 ),
               ),
               SizedBox(height: responsive.dp(2)),
@@ -114,7 +115,7 @@ class _RegisterFormState extends State<RegisterForm> {
                     child: Text(
                       "Sign in",
                       style: TextStyle(
-                        color: Colors.pinkAccent,
+                        color: parseColor('#33929A'),
                         fontSize: responsive.dp(1.5),
                       ),
                     ),
